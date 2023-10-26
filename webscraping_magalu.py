@@ -6,7 +6,7 @@ import requests
 data = {
     "nome": [],
     "preço à vista": [],
-    "preco à prazo": [],
+    "preço à prazo": [],
 }
 
 # Scrapar dados do microondas 'Electrolux 27L Ms37R' na black friday no Magazine Luíza
@@ -25,7 +25,7 @@ data['preço à vista'] += preco_microondas
 
 # Retirando o preço do microondas à prazo da página
 preco_prazo_microondas = soup.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_microondas
+data['preço à prazo'] += preco_prazo_microondas
 
 # Scrapar dados da panela de pressão elétrica
 url2 = 'https://www.magazineluiza.com.br/panela-de-pressao-eletrica-electrolux-digital-pcc20-1000w-6l-controle-de-temperatura/p/023301500/ep/eppe/'
@@ -43,7 +43,7 @@ data['preço à vista'] += preco_panela_de_pressao
 
 # Retirando o preço à prazo da panela de pressão
 preco_prazo_panela_de_pressao = soup2.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_panela_de_pressao
+data['preço à prazo'] += preco_prazo_panela_de_pressao
 
 # Scrapar dados de notebook (mais barato -- R$3000) na black friday
 url3 = 'https://www.magazineluiza.com.br/notebook-lenovo-ideapad-3i-intel-core-i5-8gb-256gb-ssd-156-full-hd-windows-11-82md0007br/p/235631700/in/note/'
@@ -61,7 +61,7 @@ data['preço à vista'] += preco_notebook_cb
 
 # Retirando o preço do notebook custo benefício à prazo
 preco_prazo_notebook_cb = soup3.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_notebook_cb
+data['preço à prazo'] += preco_prazo_notebook_cb
 
 # Scrapar dados de notebook (mais caro -- R$3500) na black friday
 url4 = 'https://www.magazineluiza.com.br/notebook-gamer-lenovo-gaming-3i-intel-core-i5-8gb-512gb-ssd-155-fullhd-nvidia-gtx-1650-windows-11/p/235631800/in/note/'
@@ -79,7 +79,7 @@ data['preço à vista'] += preco_notebook_gamer
 
 # Retirando o preço à prazo do notebook gamer
 preco_prazo_notebook_gamer = soup4.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_notebook_gamer
+data['preço à prazo'] += preco_prazo_notebook_gamer
 
 # Scrapar dados de uma cafeteira
 url5 = 'https://www.magazineluiza.com.br/cafeteira-expresso-19-bar-oster-primalatte-vermelho/p/217159000/ep/cfex/'
@@ -97,7 +97,7 @@ data['preço à vista'] += preco_cafeteira
 
 # Retirando o preço à prazo da cafeteira
 preco_prazo_cafeteira = soup5.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_cafeteira
+data['preço à prazo'] += preco_prazo_cafeteira
 
 # Scrapar dados de um iPhone 14 Pro
 url6 = 'https://www.magazineluiza.com.br/apple-iphone-14-pro-256gb-dourado-61-48mp/p/235923800/te/i14p/'
@@ -115,7 +115,7 @@ data['preço à vista'] += preco_iphone
 
 # Retirando o preço à prazo do iPhone
 preco_prazo_iphone = soup6.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_iphone
+data['preço à prazo'] += preco_prazo_iphone
 
 # Scrapar dados de um Apple Watch Series 8
 url7 = 'https://www.magazineluiza.com.br/apple-watch-series-8-41mm-gps-cellular-caixa-estelar-aluminio-pulseira-esportiva/p/235931400/te/smtw/'
@@ -133,7 +133,7 @@ data['preço à vista'] += preco_applewatch
 
 # Retirando o preço à prazo do Apple Watch
 preco_prazo_applewatch = soup7.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_applewatch
+data['preço à prazo'] += preco_prazo_applewatch
 
 # Scrapar dados do Samsung Galaxy S23 Ultra
 url8 = 'https://www.magazineluiza.com.br/smartphone-samsung-galaxy-s23-ultra-256gb-preto-5g-12gb-ram-68-cam-quadrupla-selfie-12mp/p/232855300/te/s23u/'
@@ -151,7 +151,7 @@ data['preço à vista'] += preco_s23ultra
 
 # Retirando o preço à prazo do S23 Ultra
 preco_prazo_s23ultra = soup8.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_s23ultra
+data['preço à prazo'] += preco_prazo_s23ultra
 
 # Scrapar dados da lavadora de roupas
 url9 = 'https://www.magazineluiza.com.br/lavadora-de-roupas-consul-12kg-16-programas-de-lavagem-branca-cwh12bb/p/236161100/ed/lava/'
@@ -169,7 +169,7 @@ data['preço à vista'] += preco_lavadora
 
 # Retirando o preço à prazo da lavadora de roupas
 preco_prazo_lavadora = soup9.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_lavadora
+data['preço à prazo'] += preco_prazo_lavadora
 
 # Scrapar dados de uma televisão
 url10 = 'https://www.magazineluiza.com.br/smart-tv-55-4k-oled-samsung-qn55s90ca-144hz-wi-fi-bluetooth-com-alexa-4-hdmi-2-usb/p/237449500/et/tv4k/'
@@ -187,7 +187,8 @@ data['preço à vista'] += preco_tv
 
 # Retirando o preço à prazo da televisão
 preco_prazo_tv = soup10.find('p', class_ = 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-data['preco à prazo'] += preco_prazo_tv
+data['preço à prazo'] += preco_prazo_tv
+
 
 # Criando um DataFrame
 df = pd.DataFrame(data)

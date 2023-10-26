@@ -30,4 +30,10 @@ O próximo passo será a instalação das bibliotecas que serão utilizadas para
 
 ##  Webscraping no site da Magazine Luíza
 
-O arquivo <a href="https://github.com/dani-ysc/webscraping/blob/main/webscraping_magalu.py">webscraping_magalu.py</a> contém o script escrito em python para retirar os produtos dos sites. 
+O arquivo <a href="https://github.com/dani-ysc/webscraping/blob/main/webscraping_magalu.py">webscraping_magalu.py</a> contém o script escrito em python para retirar os produtos dos sites. Os dados desses produtos com o nome, preço à vista e à prazo são salvos em um python dictionary e transformados num DataFrame usando a biblioteca pandas. Em seguida, esses dados são transformados em um arquivo .csv. Abaixo contém um pequeno esquema da tabela.
+
+| nome | preço à vista | preço à prazo |
+| --- | --- | --- |
+| Micro-ondas Electrolux 27L MS37R | R$ 768,55 | R$ 809,00 |
+
+

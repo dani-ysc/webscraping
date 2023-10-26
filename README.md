@@ -8,8 +8,26 @@ Black Friday é uma ótima época para comprar produtos que a gente precisa/dese
 
 1. Criar um ambiente virtual Python
 2. Instalar as bibliotecas que serão utilizadas no projeto no seu ambiente virtual
+3. Usar o método request GET para verificar se o site permite a retirada dos dados dele
+
+### Criando um ambiente virtual em Python
+Utilizando o comando abaixo, trocando os <> pelo nome do diretório em que ficará o ambiente virtual.
+
+```
+python -m venv <nome do diretório do ambiente virtual>
+```
+
+Ao realizar esse script no terminal, a versão mais recente de Python no seu computador será instalado no ambiente virtual. O próximo passo será a ativação do ambiente virtual, que pode ser feito através desse comando no terminal caso você esteja numa máquina com OS Windows:
+
+```
+\<diretório do ambiente virtual>\Scripts\Activate
+```
+
+O próximo passo será a instalação das bibliotecas que serão utilizadas para realização deste projeto.
+
+### Instalando as bibliotecas no ambiente virtual
 
 
 ##  Webscraping no site da Magazine Luíza
 
-O <a href="https://github.com/dani-ysc/webscraping/blob/main/webscraping_magalu.py">arquivo</a> contém o script com python para retirar os produtos dos sites. 
+O arquivo <a href="https://github.com/dani-ysc/webscraping/blob/main/webscraping_magalu.py">webscraping_magalu.py</a> contém o script escrito em python para retirar os produtos dos sites. 

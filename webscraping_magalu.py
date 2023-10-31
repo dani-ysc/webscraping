@@ -20,13 +20,21 @@ def nome_produto(tag, atributo):
     nome_item = soup.find(tag, class_ = atributo)
     data["nome"] += nome_item
 
-def preco_avista_produto(tag, atributo): 
-    preco_avista_item = soup.find(tag, class_ = atributo)
-    data["preço à vista"] += preco_avista_item
+def preco_avista_produto(tag, atributo):
+    try:
+        preco_avista_item = soup.find(tag, class_ = atributo)
+        data["preço à vista"] += preco_avista_item
+    except TypeError:
+        item_indisponivel = soup.find('h3', class_ = 'sc-kpDqfm lhhFiQ sc-doqphf fMYPKA')
+        data['preço à vista'] += item_indisponivel
 
-def preco_prazo_produto(tag, atributo): 
-    preco_prazo_item = soup.find(tag, class_ = atributo)
-    data["preço à prazo"] += preco_prazo_item
+def preco_prazo_produto(tag, atributo):
+    try:
+        preco_prazo_item = soup.find(tag, class_ = atributo)
+        data["preço à prazo"] += preco_prazo_item
+    except TypeError:
+        item_indisponivel = soup.find('h3', class_ = 'sc-kpDqfm lhhFiQ sc-doqphf fMYPKA')
+        data['preço à prazo'] += item_indisponivel
 
 # Scrapar dados do microondas 'Electrolux 27L Ms37R' na black friday no Magazine Luíza
 url1 = 'https://www.magazineluiza.com.br/micro-ondas-electrolux-27l-ms37r/p/221169600/ed/mond/'
@@ -34,7 +42,7 @@ response = requests.get(url1)
 html_doc = response.text
 soup = BS(html_doc, 'html.parser')
 
-nome_produto('h1')
+nome_produto('h1', 'sc-kpDqfm gXZPqL')
 preco_avista_produto('p', 'sc-kpDqfm eCPtRw sc-hoLEA kXWuGr')
 preco_prazo_produto('p', 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
 
@@ -87,7 +95,6 @@ soup = BS(html_doc6, 'html.parser')
 nome_produto('h1', 'sc-kpDqfm gXZPqL')
 preco_avista_produto('p', 'sc-kpDqfm eCPtRw sc-hoLEA kXWuGr')
 preco_prazo_produto('p', 'sc-kpDqfm iohXR sc-iSrTKI dyXeG')
-
 
 # Scrapar dados de um Apple Watch Series 8
 url7 = 'https://www.magazineluiza.com.br/apple-watch-series-8-41mm-gps-cellular-caixa-estelar-aluminio-pulseira-esportiva/p/235931400/te/smtw/'

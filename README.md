@@ -26,7 +26,17 @@ Ao realizar esse script no terminal, a versão mais recente de Python no seu com
 O próximo passo será a instalação das bibliotecas que serão utilizadas para realização deste projeto.
 
 ### Instalando as bibliotecas no ambiente virtual
+Para a instalação das bibliotecas necessárias para a realização do projeto, é recomendado a criação de um arquivo requirements.txt com as biliotecas necessárias e a versão delas. Verifique se o arquivo está na mesma pasta do ambiente virtual e digite o seguinte comando no terminal:
 
+```
+pip install -r requirements.txt
+```
+
+Caso você não saiba qual a versão das bibliotecas você possui no seu computador, vá ao terminal (sem estar com a máquina virtual ativada) e digite:
+```
+pip freeze
+```
+Como output, o terminal mostrará todos os pacotes instalados no seu computador e a versão utilizada.
 
 ##  Webscraping no site da Magazine Luíza
 
